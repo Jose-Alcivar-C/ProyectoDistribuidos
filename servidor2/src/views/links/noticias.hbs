@@ -1,0 +1,56 @@
+<div class="container p-4">
+
+    {{#if seHace}}
+
+        <div class="col-md-4 mx-auto">
+            <div class="card-body text-center">
+                <p class="font-weight-bold">Noticias creadas acerca de mascotas: {{noticias.length}}</p>
+            </div>
+        </div>
+        
+        <table class="tabla table table-hover table-bordered"> 
+    
+            <thead >
+                
+                <tr>
+                    <th style="width: 20%; word-wrap: break-word;">Título</th>
+                    <th style="width: 45%; word-wrap: break-word;">Descripción</th>
+                    <th style="width: 12%; word-wrap: break-word;">Enlace a noticia</th>
+                    <th style="width: 12%; word-wrap: break-word;">Link de foto</th>
+                    <th style="width: 9%; word-wrap: break-word;"> Acciones</th>
+                </tr>
+
+            </thead>
+            
+            <tbody>
+                {{#each noticias}}
+            
+                    <tr>
+                        <td>{{titulo}}</td>
+                        <td>{{descripcion}}</td>
+                        <td><a href="{{enlace}}" target="_blank">Ver noticia</a></td>
+                        <td><a href="{{url_foto}}" target="_blank">Ver foto</a></td>
+                        <td style="display: flex; justify-content: space-between;">
+                            <a href="/usuario/noticias/borrar/{{id_noticia}}" class="delete" title="Borrar" data-toggle="tooltip"><span class="material-icons-outlined" >delete</span></a>
+                            <a href="/usuario/noticias/editar/{{id_noticia}}" class="delete" title="Editar" data-toggle="tooltip"><span class="material-icons-outlined">edit</span></a>
+                        </td>
+                    </tr>
+
+                {{/each}}
+            
+            </tbody>
+            
+        </table>
+
+    {{else}}
+
+        <div class="col-md-4 mx-auto">
+            <div class="card card-body text-center">
+                <p>Su usuario no ha creado noticias acerca de mascotas.</p>
+                <a href="/usuario/noticias/anadir">¿Desea crear una noticia sobre mascotas?</a>
+            </div>
+        </div>  
+
+    {{/if}}
+
+</div>

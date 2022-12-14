@@ -1,0 +1,47 @@
+<div class="container p-4">
+     
+    <div id="seccionNoticias" *ngIf="noticias.length >0; else siestavacio">
+
+        <div class="cajaNoticia" *ngFor="let noticia of noticias">
+    
+            <div class="elementosNoticia">
+    
+                <div class="fotoNoticia">
+    
+                    <img src="{{noticia.url_foto}}" alt="Imagen Noticia">
+    
+                </div>
+                    <p class="tituloNoticia">{{noticia.titulo}}</p>
+                    <p class="desNoticia">{{noticia.descripcion}}</p>
+                    <a href="{{noticia.enlace}}" target="_blank"><p>Visitar Noticia</p></a>
+                <div>
+    
+                </div>
+    
+            </div>
+    
+        </div>
+    
+    </div>  
+    
+    <ng-template #siestavacio>
+    
+        <div class="col-md-5 mx-auto">
+    
+            <div class="card text-center">
+    
+                <div class="card-body">
+    
+                    <h5>
+                        No hay noticias creadas actualmente
+                    </h5>
+    
+                </div>
+    
+            </div>
+    
+        </div>
+    
+    </ng-template>
+    
+</div>

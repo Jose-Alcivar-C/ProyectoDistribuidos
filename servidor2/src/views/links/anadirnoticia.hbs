@@ -1,0 +1,53 @@
+{{!-- formulario de añadir noticias --}}
+
+<div class="container p-4">
+
+    <div class="row">
+
+        <div class="col-md-4 mx-auto">
+
+            <div class="card">
+
+                <div class="card-header text-center">
+                    <h5>Datos de la noticia sobre mascotas</h5>
+                </div>
+
+                <div class="card-body"> 
+
+                    <form action="/usuario/noticias/anadir" method="post">
+
+                        <div class="form-group">
+                            <label for="titulo">Título de noticia:</label>
+                            <input type="text" class="form-control" name="titulo" placeholder="Ingrese el título de la noticia." required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="descripcion">Breve resumen:</label>
+                            <textarea type="text" class="form-control" name="descripcion" placeholder="Ingrese un breve resumen de la noticia." rows="2" required></textarea>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="enlace">Link hacia la noticia:</label>
+                            <input type="url" class="form-control" name="enlace" placeholder="Ingrese el link hacia la noticia." required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="url_foto">Link hacia foto:</label>
+                            <input type="url" class="form-control" name="url_foto" placeholder="Ingrese link de una foto de la noticia." required>
+                        </div>
+
+                        <div class="form-group">
+                            <button class="btn btn-success btn-block pintarBoton">Crear noticia</button>
+                        </div>
+
+                    </form>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>

@@ -1,0 +1,62 @@
+<nav class="navbar navbar-expand-lg navbar-dark" style="background-color:#56cfab;">
+  <div class="container-fluid container">
+    <a class="navbar-brand" href="#">Adoptar es salvar</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse justify-content-end" id="navbarNavDropdown">
+      <ul class="navbar-nav">
+
+        {{#if user}}
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle font-weight-bold" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false" style="color:#ffffff;">
+              Adopciones
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+              <a class="dropdown-item" href="/usuario/mascotas">Mascotas que he registrado</a>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item" href="/usuario/mascotas/anadir">Dar en adopción una nueva mascota</a>
+            </ul>
+          </li>
+
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle font-weight-bold" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false" style="color:#ffffff;">
+              Noticias sobre mascotas
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+              <a class="dropdown-item" href="/usuario/noticias">Ver mis noticias creadas</a>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item" href="/usuario/noticias/anadir">Crear una noticia</a>
+            </ul>
+          </li>
+
+          <!-- <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle font-weight-bold" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false" style="color:#ffffff;">
+              Mensajes
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+              <a class="dropdown-item" href="">Mensajes recibidos</a>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item" href="">Enviar un mensaje</a>
+            </ul>
+          </li> -->
+
+          <li class="nav-item">
+            <a href="/usuario" class="nav-link font-weight-bold" style="color:#ffffff;">Principal</a>
+          </li>
+
+          <li class="nav-item">
+            <a href="/salir" class="nav-link font-weight-bold" style="color:#ffffff;">Cerrar sesion</a>
+          </li>
+
+          {{else}}
+
+          <li class="nav-item">
+            <a href="http://localhost:4200/principal" class="nav-link font-weight-bold" style="color:#ffffff;">Volver</a>
+          </li>
+        {{/if}}
+
+      </ul>
+    </div>
+  </div>
+</nav>
