@@ -12,7 +12,7 @@ export class EnadopcionComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
-    fetch("http://localhost:3000/valores/mascotas")
+    fetch("http://ec2-44-209-225-228.compute-1.amazonaws.com/valores/mascotas")
     .then(response => response.json())
     .then(data => {
         this.mascotas = data;

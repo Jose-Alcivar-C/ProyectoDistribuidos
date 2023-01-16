@@ -14,7 +14,7 @@ export class NoticiasComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    fetch("http://localhost:3000/valores/noticias")
+    fetch("http://ec2-44-209-225-228.compute-1.amazonaws.com/valores/noticias")
     .then(response => response.json())
     .then(data => {
         this.noticias = data;
